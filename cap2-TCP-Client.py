@@ -1,8 +1,7 @@
 import socket
-from urllib import response
 
-target_host = "www.rodrigobrito.dev.br"
-target_port = 80
+target_host = "0.0.0.0"
+target_port = 9999
 
 # create object socket
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -11,7 +10,7 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((target_host, target_port))
 
 # send data
-message = "GET / HTTP/1.1\r\nHost: rodrigobrito.dev.br\r\n\r\n"
+message = "AAABBBCCC"
 client.sendto(message.encode('utf-8'), (target_host, target_port))
 
 # receive data
